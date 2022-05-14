@@ -350,7 +350,8 @@ button:hover {
   margin: auto;
   height: 600px;
   width: 70%;
-  border: 3px solid green;
+  border: 5px solid green;
+  border-style: outset;
   padding: 5px;
   /* position relative and top i can move div down */
   position: relative;
@@ -368,6 +369,7 @@ button:hover {
   text-align: center;
   padding: 20px;
   background-color: rgba(50, 50, 50, 6);
+  border: 10px double;
 
 }
 
