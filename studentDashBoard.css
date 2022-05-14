@@ -1,7 +1,8 @@
 /* body */
-body {
+
+/* body {
   background-color: black;
-} 
+}  */
 
 /* logo */
 .StudentDashBoardLogo {
@@ -243,3 +244,22 @@ button:hover {
   opacity: 0.15;
   color: black;
 }
+
+
+/* weather Div */
+/* left: 600px */
+/* actually float right */
+
+.weatherContainer{
+  top: 200px;
+  box-sizing: border-box;
+  padding: 40px;
+  margin: 0;
+  height:  70vh;
+  display: grid;
+  place-items: center;
+  width: 35;
+  float: right;
+  position: relative;
+
+} 
