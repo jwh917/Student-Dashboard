@@ -371,3 +371,43 @@ button:hover {
 
 }
 
+.loctionInfoContainer button{
+  height: 20px;
+  width: 200px;
+}
+
+
+.card-img{
+ border-radius: 10px;
+ padding: 5px;
+
+}
+
+
+.card-body{
+  padding: 5px;
+  background: rgba(24, 24, 27, 0.3);
+  border-radius: 10px;
+
+}
+
+/* unvisited link */
+a:link {
+  color: green;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+}
+
+/* selected link */
+a:active {
+  color: white;
+}
+
