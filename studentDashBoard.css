@@ -359,3 +359,15 @@ button:hover {
 
 }
 
+.loctionInfoContainer{
+  display: flex;
+  height: 300px;
+  width: 270px;
+  position: relative;
+  top: 925px;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(50, 50, 50, 6);
+
+}
+
