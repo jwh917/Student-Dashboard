@@ -344,3 +344,18 @@ button:hover {
   text-align: center;
 
 }
+
+/* location */
+.loctionContainer{
+  margin: auto;
+  height: 600px;
+  width: 70%;
+  border: 3px solid green;
+  padding: 5px;
+  /* position relative and top i can move div down */
+  position: relative;
+  top: 300px;
+  float: right;
+
+}
+
