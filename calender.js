@@ -1,4 +1,4 @@
-// calendar func
+// calendar js
 
 const date = new Date()
 
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
   monthListFunc()
 
   changeYearFunc()
-  
+
   renderCalendar(newCurrentDate, newCurrentMonth.value, newCurrentYear.value)
 
 
