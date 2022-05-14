@@ -122,7 +122,7 @@ const currentCalc = document.getElementById("current-calc")
 const calculator = new Calculator(displayScreen, currentCalc)
 
 
-console.log(calculator)
+// console.log(calculator)
 
 calcButtonC.addEventListener("click", button => {
   // console.log(button)
@@ -143,7 +143,7 @@ calcButtonEq.addEventListener("click", button => {
 
 
 calcButtonsNum.forEach(button => {
-  console.log(button)
+  // console.log(button)
   button.addEventListener("click", () => {
     console.log(button.value)
     calculator.renderNum(button.value)
@@ -153,7 +153,7 @@ calcButtonsNum.forEach(button => {
 })
 
 calcButtonsOp.forEach(button => {
-  console.log(button)
+  // console.log(button)
   button.addEventListener("click", () => {
     console.log(button.value)
     calculator.chooseOperator(button.value)
@@ -161,3 +161,5 @@ calcButtonsOp.forEach(button => {
   })
   
 })
+
+
