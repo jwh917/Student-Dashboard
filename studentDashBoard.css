@@ -70,10 +70,101 @@ body {
   border: 1px solid white;
 }
 
+.dateInfoStr{
+  left: 100px;
+  color: black;
+
+}
 
 
+.changeMonth{
+  padding: 25px 20px;
+  font-size: 60px;
+}
+
+/* change hover size */
+.changeMonth:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+.monthList{
+  position: absolute;
+  width: 50%;   
+  float: right;
+  height: 40%; 
+  top: 20px;
+  left: 1.5rem;
+  background-color: darkgray;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 13px;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.monthList.show{
+  transform: scale(1);
+  visibility: visible;
+  pointer-events: visible;
+}
 
 
+.monthList > div{
+  display: grid;
+  place-items: center;
+}
+
+.monthList > div > div{
+  width: 100%;
+  padding: 5px 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.monthList > div > div:hover{
+ background-color: lightgray;
+}
+
+
+.pickYear{
+  display: flex;
+  align-items: center;
+}
+
+.changeYear{
+  height: 25px;
+  width: 25px;
+  font-size: medium;
+  margin: 0 10px
+}
+
+button {
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	background: #333;
+	margin: 10px;
+	border: none;
+	border-radius: 10px;
+	box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
+	color: #222;
+	font-size: 16px;
+}
+
+button:hover {
+	box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222, inset -5px -5px 10px #444;
+	font-size: 15px;
+	transition: 500ms;
+}
+
+/* make all buttons with and an id and this css */
+#prevButton, #nextButton{
+  background-color: darkgray;
+  cursor: pointer;
+}
 
 .weekdays{
   color: black;
@@ -105,7 +196,50 @@ body {
   align-items: center;
 }
 
+/* stop twerking */
+.days{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  width: 100;
+  /* display: flex; */
+  flex-wrap: wrap;
+  padding: 0.2rem;
+  color: silver;
+/* change from white */
+  border: 2px solid white;
+  
+}
+
+.days div{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  padding: 5px;
+
+  font-size: 1.4rem;
+  margin: 0.5rem;
+  width: 4rem; 
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.days div:hover:not(.currentDate){
+  background-color: lightgray;
+  border: 0.1px solid #777;
+  transition: 1s;
+}
 
 
+.currentDate{
+  background-color: #373737;
+  color: black;
+}
 
-
+.previousMonthDays,
+.nextMonthDays{
+  opacity: 0.15;
+  color: black;
+}

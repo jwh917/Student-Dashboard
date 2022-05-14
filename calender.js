@@ -205,7 +205,13 @@ let newCurrentYear = {value: newCurrentDate.getFullYear()}
 
 document.addEventListener('DOMContentLoaded', () => {
   // console.log('DOM fully loaded and parsed')
- 
+  
+  renderDateInfo()
+
+  monthListFunc()
+
+  changeYearFunc()
+  
   renderCalendar(newCurrentDate, newCurrentMonth.value, newCurrentYear.value)
 
 
