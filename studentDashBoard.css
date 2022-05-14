@@ -411,3 +411,44 @@ a:active {
   color: white;
 }
 
+img{
+  animation-name: bounce;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  /* lookup */
+}
+
+ @keyframes bounce{
+
+/* 
+  from
+
+  to */
+
+  0%{
+    transform: translateY(0px) rotateY(0deg);
+  }
+
+  25%{
+    transform: translateY(5px) rotateY(5deg);
+
+  }
+
+  50%{
+    transform: translateY(0px) rotateY(0deg);
+
+  }
+
+  75%{
+    transform: translateY(-5px) rotateY(-5deg);
+
+  }
+
+  100%{
+    transform: translateY(0px) rotateY(0deg);
+
+  }
+
+  
+ }
