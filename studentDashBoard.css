@@ -263,3 +263,84 @@ button:hover {
   position: relative;
 
 } 
+
+/* weather Div */
+/* left: 600px */
+/* actually float right */
+
+.weatherContainer{
+  top: 200px;
+  box-sizing: border-box;
+  padding: 40px;
+  margin: 0;
+  height:  70vh;
+  display: grid;
+  place-items: center;
+  width: 35;
+  float: right;
+  color: white;
+  background: skyblue;
+  border-radius: 20px;
+
+  border: 1px solid white;
+
+  position: relative;
+
+} 
+
+.weatherSection{
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(24, 24, 27, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  border: 5px solid white;
+
+}
+
+.locationDeg{
+  font-size: 35px;
+}
+
+
+
+.headerWeatherImg{
+  height: 75px;
+  width: 75px;
+  position: relative;
+  top: 125px;
+
+}
+
+.headerWeatherImg img{
+  height: 105px;
+  width: 105px;
+}
+
+
+
+.imgComHL{
+  font-size: 18px;
+  position: relative;
+  top: 15px;
+
+}
+
+.weatherDaysInfo{
+  background: rgba(24, 24, 27, 0.8);
+  border-radius: 10px;
+  border: 3.5px solid white;
+  display: flex;
+  width: 600px;
+
+  align-items: center;
+  justify-content: center;
+
+}
+
+.weatherDaysDivs{
+  font-size: 9px;
+  padding: 10px;
+  text-align: center;
+
+}
