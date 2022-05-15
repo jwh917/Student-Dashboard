@@ -170,21 +170,20 @@
       <!-- notes -->
 
       <div class="formContainer">
+        <h1 class="newNoteFormHeader">My New Note:</h1>
         <form id="new-note-form">
-          <div class="form-group">
-            <h1>My New Note:</h1>
-            <input name="note" type="text" class="form-control" id="new-note" placeholder="Your Note Goes Here...">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+     
+          <textarea name="note" type="text" id="new-note" placeholder="Your Note Goes Here..."></textarea>
+
+          <button type="submit" class="noteSubmitButton">Submit</button>
         </form>
       </div>
 
-
       <div class="notesContainer">
 
-        <div class="notes" id="notesId">
+        <div class="notes">
 
-          <h1>My Notes:</h1>
+          <h1 class="note-pad-header">My Notes:</h1>
           <div class="note-pad">
             
             <ul id="notes-list"></ul>
@@ -201,7 +200,6 @@
     <script type="text/javascript" src="map.js"></script>
     <script type="text/javascript" src="calc.js"></script>
     <script type="text/javascript" src="notes.js"></script>
-
 
   </body>
 </html>

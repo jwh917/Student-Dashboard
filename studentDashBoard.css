@@ -1,8 +1,8 @@
 /* body */
 
-/* body {
+body {
   background-color: black;
-}  */
+} 
 
 /* logo */
 .StudentDashBoardLogo {
@@ -471,6 +471,8 @@ img{
   right: 0;
   border: 10px groove;
   padding: 5px;
+  bottom: 350px;
+  margin-right: 200px;
 }
 
 .calculator {
@@ -624,4 +626,71 @@ img{
   -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
   -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
   box-shadow: inset 0px 0px 5px #c1c1c1;
+ }
+
+ /* notes */
+
+
+
+ .formContainer{
+  width: 350px;
+  border: inset yellow 10px;
+  margin-left: 50px;
+  position: relative;
+
+ }
+
+ .newNoteFormHeader{
+  font-family: 'Brush Script MT', cursive;
+  font-size: 50px;
+  padding: 10px;
+  color: yellow;
+ }
+
+ #new-note{
+  width: 250px;
+  height: 100px;
+  padding: 5px;
+  margin-left: 10px;
+  position: relative;
+  bottom: 20px;
+  background-color: lightyellow;
+
+ }
+
+ .noteSubmitButton{
+   width: 100px;
+   height: 60px;
+   align-items: center;
+   color: yellow;
+ }
+
+ .note-pad-header{
+  font-family: 'Brush Script MT', cursive;
+  color: white;
+
+ }
+
+ .notesContainer{
+   /* border: outset yellow 15px; */
+   margin-top: 100px;
+   /* padding: 50px; */
+ }
+
+ .notes{
+  width: 1000px;
+  height: 50px;
+  background: black;
+  border-radius: 5px 5px 0 0;
+ }
+
+ .note-pad{
+  width: 1000px;
+  height: 100%;
+  min-height: 60vh;
+  padding: 35px 20px;
+  background: repeating-linear-gradient(lightyellow, yellow 31px, #333 31px, #333 32px);
+  line-height: 32px;
+  outline: 0;
+  font-size: 22px;
  }
