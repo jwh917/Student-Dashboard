@@ -684,13 +684,33 @@ img{
   border-radius: 5px 5px 0 0;
  }
 
+/* need note-pad to grow as notes are added */
  .note-pad{
+   position: relative;
   width: 1000px;
   height: 100%;
   min-height: 60vh;
-  padding: 35px 20px;
+  /* padding: 35px; */
   background: repeating-linear-gradient(lightyellow, yellow 31px, #333 31px, #333 32px);
   line-height: 32px;
   outline: 0;
-  font-size: 22px;
+  font-size: 12px;
  }
+
+ .deleteBtn{
+   width: 100px;
+   height: 25px;
+ }
+
+ /* .notes-list{
+   padding: 10px;
+  } */
+
+  .liNotes{
+    width: 300px;
+    height: 172px;
+    padding: 10px;
+  }
+
+
+ 
