@@ -10,7 +10,7 @@ function fetchWeatherData(){
     .then(data=>
     {
       
-      // console.log(data)
+      console.log(data)
       // console.log(Object.keys(data))
       
       // console.log(Object.entries(data))

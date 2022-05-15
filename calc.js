@@ -104,6 +104,8 @@ class Calculator{
 
     this.currentCalc.value = this.currentCalcValue
 
+    
+
 
     console.log(this.displayScreen.value)
     console.log(this.currentCalc.value)
@@ -139,7 +141,6 @@ calcButtonEq.addEventListener("click", button => {
   calculator.updateScreen()
 
 })
-
 
 
 calcButtonsNum.forEach(button => {

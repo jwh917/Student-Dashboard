@@ -165,16 +165,36 @@
 
       </div>
 
+      <div class="formContainer">
+        <form id="new-note-form">
+          <div class="form-group">
+            <label for="new-note">New Note</label>
+            <input name="note" type="text" class="form-control" id="new-note" placeholder="Your Note Goes Here :)">
+          </div>
+          <!-- <div class="form-group">
+            <label for="Author">Author</label>
+            <input name="author" type="text" class="form-control" id="author" placeholder="Flatiron School">
+          </div> -->
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
 
-    
 
       <div class="notesContainer">
-        <div class="notes">
+
+        <div class="notes" id="notesId">
+
+          <h1>My quotes:</h1>
+          <div>
+            
+            <ul id="notes-list"></ul>
+
+          </div>
 
         </div>
+
       </div>
     </div>
-  </div>
 
     <script type="text/javascript" src="calender.js"></script>
     <script type="text/javascript" src="weather.js"></script>
