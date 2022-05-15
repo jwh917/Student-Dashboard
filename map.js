@@ -12,6 +12,9 @@ function renderMap(){
   fetch("http://localhost:3000/apiKey")
   .then(response => response.json())
   .then(data => {
+
+        console.log(data)
+
     
     googleMap.src += data.googleKey
     // console.log(googleMap.src)

@@ -6,7 +6,7 @@ function fetchNotes(){
   .then(response => response.json())
   .then(data => {
     
-  console.log(data)
+  // console.log(data)
   // console.log(data[0])
   // console.log(data[1])
   // console.log(data[0].noteDate)
@@ -15,11 +15,10 @@ function fetchNotes(){
   // console.log(data[1].noteDate)
   // console.log(data[1].note)
   // console.log(data[1].noteId)
-
+  notesList.innerHTML = ""
   renderNotes(data)
 
   })
-
 
 }
 
@@ -27,10 +26,10 @@ function fetchNotes(){
 function renderNotes(noteData){
   // console.log(noteData)
   noteData.forEach(element => {
-    console.log(element)
-    console.log(element.note)
-    console.log(element.noteDate)
-    console.log(element.noteId)
+    // console.log(element)
+    // console.log(element.id)
+    // console.log(element.note)
+    // console.log(element.noteDate)
 
     let noteLi = document.createElement("li")
     noteLi.className = "liNotes"
@@ -47,16 +46,82 @@ function renderNotes(noteData){
     noteLi.appendChild(deleteButton)
     notesList.appendChild(noteLi)
 
-    
+    deleteButton.addEventListener("click", () => {
+
+      deleteButtonFunc(element.id, noteLi)
+
+    })
+
   });
   
 
 }
 
 
+const newNote = document.getElementById("new-note")
+
+function formSubmitButtonFunc(){
+  const newNoteForm = document.getElementById("new-note-form")
+  
+
+  newNoteForm.addEventListener("submit", function(event){
+    event.preventDefault()
+    // console.log(event)
+    // console.log(newNoteForm.value)
+    let newNoteDate = new Date()
+    // console.log(newNoteDate.toDateString())
+
+    fetch(notesUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"},
+        body: JSON.stringify({
+          
+          "noteDate": newNoteDate.toDateString(),
+          "note": newNote.value
+
+  
+        }),
+      })
+      .then(response => response.json())
+      .then(data => {
+  
+        // console.log('Success:', data)
+      
+      })
+
+      fetchNotes()
+      newNoteForm.reset()
+
+  })
+
+}
+
+
+function deleteButtonFunc(noteId, noteLi){
+  
+  console.log(noteId, noteLi)
+
+  noteLi.remove()
+
+  fetch(`http://localhost:3000/notes/${noteId}/?_embed=likes`,{
+    method:'DELETE'
+    })
+    .then(response => response.json())
+    .then(data => {
+     
+    console.log(data)
+
+    })   
+    
+}
+
+
 document.addEventListener("DOMContentLoaded", function() {
   
   fetchNotes()
+  formSubmitButtonFunc()
 
 })
 

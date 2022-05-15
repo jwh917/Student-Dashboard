@@ -50,10 +50,9 @@ body {
   display: grid;
   place-items: center;
   width: 25;
-  /* height: 50; */
   background-color: #515151;
-
 /* change white */
+
   border: 5px solid white;
 }
 
@@ -65,9 +64,9 @@ body {
   align-items: center;
   padding: 0 3.8rem;
   text-align: center;
-
   color: black;
 /* change white */
+
   border: 1px solid white;
 }
 
@@ -84,6 +83,7 @@ body {
 }
 
 /* change hover size */
+
 .changeMonth:hover {
   background-color: gray;
   cursor: pointer;
@@ -161,7 +161,6 @@ button:hover {
 	transition: 500ms;
 }
 
-/* make all buttons with and an id and this css */
 #prevButton, #nextButton{
   background-color: darkgray;
   cursor: pointer;
@@ -169,17 +168,14 @@ button:hover {
 
 .weekdays{
   color: black;
-
-
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  
   width: 100;
   height: 100;
   padding: 20px;
-  /* display: flex; */
   align-items: center;
   /* change white */
+
   border: 2px solid white;
 
 }
@@ -187,27 +183,25 @@ button:hover {
 .weekdays div{
   display: grid;
   place-items: center;
-  /* top: 20; */
   font-size: 14px;
-  /* font-weight: 400;s */
   letter-spacing: 0.1rem;
   padding: 0 0.4rem;
-  /* display: flex;  */
   justify-content: center;
   align-items: center;
 }
 
 /* stop twerking */
+
 .days{
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 2px;
   width: 100;
-  /* display: flex; */
   flex-wrap: wrap;
   padding: 0.2rem;
   color: silver;
 /* change from white */
+
   border: 2px solid white;
   
 }
@@ -217,7 +211,6 @@ button:hover {
   height: 50px;
   position: relative;
   padding: 5px;
-
   font-size: 1.4rem;
   margin: 0.5rem;
   width: 4rem; 
@@ -233,7 +226,6 @@ button:hover {
   transition: 1s;
 }
 
-
 .currentDate{
   background-color: #373737;
   color: black;
@@ -246,9 +238,7 @@ button:hover {
 }
 
 
-/* weather Div */
-/* left: 600px */
-/* actually float right */
+/* weather */
 
 .weatherContainer{
   top: 200px;
@@ -264,10 +254,6 @@ button:hover {
 
 } 
 
-/* weather Div */
-/* left: 600px */
-/* actually float right */
-
 .weatherContainer{
   top: 200px;
   box-sizing: border-box;
@@ -281,9 +267,7 @@ button:hover {
   color: white;
   background: skyblue;
   border-radius: 20px;
-
   border: 1px solid white;
-
   position: relative;
 
 } 
@@ -332,7 +316,6 @@ button:hover {
   border: 3.5px solid white;
   display: flex;
   width: 600px;
-
   align-items: center;
   justify-content: center;
 
@@ -354,6 +337,7 @@ button:hover {
   border-style: outset;
   padding: 5px;
   /* position relative and top i can move div down */
+
   position: relative;
   top: 300px;
   float: right;
@@ -418,7 +402,7 @@ img{
   animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  /* lookup */
+  /* ^ lookup V */
 }
 
  @keyframes bounce{
@@ -460,9 +444,6 @@ img{
   top: 1500px;
     
 }
-
- /* for notes */
-/* margin-left: 50px; */
 
 /* calculator */
 
@@ -630,8 +611,6 @@ img{
 
  /* notes */
 
-
-
  .formContainer{
   width: 350px;
   border: inset yellow 10px;
@@ -672,9 +651,7 @@ img{
  }
 
  .notesContainer{
-   /* border: outset yellow 15px; */
    margin-top: 100px;
-   /* padding: 50px; */
  }
 
  .notes{
@@ -694,6 +671,9 @@ img{
   background: repeating-linear-gradient(lightyellow, yellow 31px, #333 31px, #333 32px);
   line-height: 32px;
   outline: 0;
+  /* its only blue for testing (figure out how to make the */
+  /* note pad grow as the notes are added ) true color - white  */
+  color: blue;
   font-size: 12px;
  }
 
@@ -701,10 +681,6 @@ img{
    width: 100px;
    height: 25px;
  }
-
- /* .notes-list{
-   padding: 10px;
-  } */
 
   .liNotes{
     width: 300px;

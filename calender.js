@@ -158,7 +158,6 @@ function monthListFunc(){
       newCurrentDate.setMonth(index)
       // console.log(index)
       renderCalendar(newCurrentDate, newCurrentMonth.value, newCurrentYear.value)
-      // renderCalendar()
     }
 
     monthList.appendChild(month)
@@ -181,7 +180,6 @@ function changeYearFunc(){
     // console.log(newCurrentYear.value)
     newCurrentDate.setFullYear(newCurrentYear.value)
     renderCalendar(newCurrentDate, newCurrentMonth.value, newCurrentYear.value)
-    // renderCalendar()
 
   }
 
@@ -190,7 +188,6 @@ function changeYearFunc(){
     ++newCurrentYear.value
     newCurrentDate.setFullYear(newCurrentYear.value)
     renderCalendar(newCurrentDate, newCurrentMonth.value, newCurrentYear.value)
-    // renderCalendar()
 
   }
 }
