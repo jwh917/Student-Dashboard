@@ -34,7 +34,10 @@ Usage
   - The Dashboard uses a variety of graphical effects for displaying and use of the widgets. Students can use the widgets as they see fit throughout their day to day. The calendar’s months and years can be changed dynamically making it easy to plan ahead. A weather app showing the current forecast and what the future forecast would be for the next eight days. The map is capable of zooming in/out and having free roam on it. The Dashboard also included a notepad that grows as notes are added to it. Along with a calculator to do any simple calculation the student desires. Even some animation throughout the Dashboard like the weather images floating as if they were in the sky themselves.
 
     - Screenshot video of using calendar 
-    - Screenshot video of using note pad   
+    - Screenshot video of using note pad 
+
+Blog
+  - https://medium.com/@jwh_917/creating-a-student-dashboard-1b97079a4f1b
 
 Acknowledgments
 
@@ -44,4 +47,3 @@ Acknowledgments
   - Codegrepper (https://www.codegrepper.com/)
   - WeatherDB weather API (https://weatherdbi.herokuapp.com/documentation/v1#:~:text=503)
   - Google Maps Api (https://developers.google.com/maps/get-started)
-  
