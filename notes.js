@@ -22,6 +22,37 @@ function fetchNotes(){
 
 }
 
+// make render one note
+
+function createOneNote(data){
+
+  let noteLi = document.createElement("li")
+  noteLi.className = "liNotes"
+  // noteLi.id = `note-${element.noteId}`
+
+  noteLi.innerHTML = 
+  `<h2>${data.note}</h2>
+  <h3>${data.noteDate}</h3>` 
+
+  let deleteButton = document.createElement("button")
+  deleteButton.className = "deleteBtn"
+  deleteButton.innerHTML = "Delete"
+
+  noteLi.appendChild(deleteButton)
+  notesList.appendChild(noteLi)
+
+  deleteButton.addEventListener("click", () => {
+
+    deleteButtonFunc(data.id, noteLi)
+
+  })
+
+  
+
+}
+
+
+
 
 function renderNotes(noteData){
   // console.log(noteData)
@@ -31,26 +62,28 @@ function renderNotes(noteData){
     // console.log(element.note)
     // console.log(element.noteDate)
 
-    let noteLi = document.createElement("li")
-    noteLi.className = "liNotes"
-    // noteLi.id = `note-${element.noteId}`
+    // let noteLi = document.createElement("li")
+    // noteLi.className = "liNotes"
+    // // noteLi.id = `note-${element.noteId}`
 
-    noteLi.innerHTML = 
-    `<h2>${element.note}</h2>
-    <h3>${element.noteDate}</h3>` 
+    // noteLi.innerHTML = 
+    // `<h2>${element.note}</h2>
+    // <h3>${element.noteDate}</h3>` 
 
-    let deleteButton = document.createElement("button")
-    deleteButton.className = "deleteBtn"
-    deleteButton.innerHTML = "Delete"
+    // let deleteButton = document.createElement("button")
+    // deleteButton.className = "deleteBtn"
+    // deleteButton.innerHTML = "Delete"
 
-    noteLi.appendChild(deleteButton)
-    notesList.appendChild(noteLi)
+    // noteLi.appendChild(deleteButton)
+    // notesList.appendChild(noteLi)
 
-    deleteButton.addEventListener("click", () => {
+    // deleteButton.addEventListener("click", () => {
 
-      deleteButtonFunc(element.id, noteLi)
+    //   deleteButtonFunc(element.id, noteLi)
 
-    })
+    // })
+
+    createOneNote(element)
 
   });
   
@@ -88,10 +121,33 @@ function formSubmitButtonFunc(){
       .then(data => {
   
         // console.log('Success:', data)
+
+        // let noteLi = document.createElement("li")
+        // noteLi.className = "liNotes"
+        // // noteLi.id = `note-${element.noteId}`
+    
+        // noteLi.innerHTML = 
+        // `<h2>${data.note}</h2>
+        // <h3>${data.noteDate}</h3>` 
+    
+        // let deleteButton = document.createElement("button")
+        // deleteButton.className = "deleteBtn"
+        // deleteButton.innerHTML = "Delete"
+    
+        // noteLi.appendChild(deleteButton)
+        // notesList.appendChild(noteLi)
+    
+        // deleteButton.addEventListener("click", () => {
+    
+        //   deleteButtonFunc(data.id, noteLi)
+    
+        // })
+
+        createOneNote(data)
       
       })
 
-      fetchNotes()
+      // fetchNotes()
       newNoteForm.reset()
 
   })

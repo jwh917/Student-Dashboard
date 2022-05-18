@@ -107,6 +107,7 @@ class Calculator{
     
 
 
+
     console.log(this.displayScreen.value)
     console.log(this.currentCalc.value)
     console.log(this.currentCalcValue)

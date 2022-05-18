@@ -69,15 +69,42 @@ function renderCalendar(newDate, month, year){
 
     // console.log(currentDate.getDay())
 
+
+
+
+
+
+
+
+
+
+  //last day of the current month
   const lastDay = new Date(year, month + 1, 0).getDate()
 
+  //last day of the previous month
   const prevLastDay = new Date(year, month, 0).getDate()
+
+  //index of the date of the current month (Sunday at the 0 index)
+  const lastDayIndex = new Date(year, month + 1, 0).getDay()
+
+  
+
+
+  
+
+
+
+
+  const nextDays = 7 - lastDayIndex - 1
 
   const firstDayIndex = newDate.getDay()
 
-  const lastDayIndex = new Date(year, month + 1, 0).getDay()
 
-  const nextDays = 7 - lastDayIndex - 1
+  console.log(lastDay)
+  console.log(prevLastDay)
+  console.log(firstDayIndex)
+  console.log(lastDayIndex)
+  console.log(nextDays)
 
   let days = ""
 
@@ -182,7 +209,6 @@ function changeYearFunc(){
     renderCalendar(newCurrentDate, newCurrentMonth.value, newCurrentYear.value)
 
   }
-
 
   nextButton.onclick = () => {
     ++newCurrentYear.value

@@ -442,6 +442,7 @@ img{
  .calc-notesContainer{
   position: relative;
   top: 1500px;
+  /* display: inline-block; */
     
 }
 
@@ -631,7 +632,6 @@ img{
   height: 100px;
   padding: 5px;
   margin-left: 10px;
-  position: relative;
   bottom: 20px;
   background-color: lightyellow;
 
@@ -647,34 +647,40 @@ img{
  .note-pad-header{
   font-family: 'Brush Script MT', cursive;
   color: white;
+  margin-left: 10px;
 
  }
 
- .notesContainer{
+ /* .notesContainer{
    margin-top: 100px;
- }
+ } */
 
  .notes{
   width: 1000px;
   height: 50px;
-  background: black;
+  /* background: black; */
+  background: rgba(80, 80, 80, 1);
   border-radius: 5px 5px 0 0;
  }
 
 /* need note-pad to grow as notes are added */
  .note-pad{
-   position: relative;
+  display: flex;
+  position: relative;
   width: 1000px;
-  height: 100%;
-  min-height: 60vh;
+  /* height: 1000px; */
+  /* height: auto; */
+  /* min-height: 60vh; */
   /* padding: 35px; */
   background: repeating-linear-gradient(lightyellow, yellow 31px, #333 31px, #333 32px);
   line-height: 32px;
   outline: 0;
   /* its only blue for testing (figure out how to make the */
   /* note pad grow as the notes are added ) true color - white  */
-  color: blue;
+  color: black;
   font-size: 12px;
+  bottom: 376px;
+  
  }
 
  .deleteBtn{
