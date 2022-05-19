@@ -70,14 +70,6 @@ function renderCalendar(newDate, month, year){
     // console.log(currentDate.getDay())
 
 
-
-
-
-
-
-
-
-
   //last day of the current month
   const lastDay = new Date(year, month + 1, 0).getDate()
 
@@ -90,7 +82,7 @@ function renderCalendar(newDate, month, year){
   
 
 
-  
+
 
 
 
