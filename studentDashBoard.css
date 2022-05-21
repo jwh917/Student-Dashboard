@@ -1,5 +1,4 @@
 /* body */
-
 body {
   background-color: black;
 } 
@@ -9,8 +8,8 @@ body {
   width: 100;
   height: 100;
   position: relative;
-
 }
+
   .StudentDashBoardLogo video {
   width: 100%;
   height: 100%;
@@ -19,6 +18,7 @@ body {
   left: 0;
   object-fit: cover;
 }
+
   .title {
   width: 100%;
   height: 100%;
@@ -31,7 +31,6 @@ body {
 }
 
 /* calendar */
-
 .calendarContainer {
   position: absolute;
   left: 10px;
@@ -40,7 +39,6 @@ body {
   color: aliceblue;
   display: flex;
   float: left;
-
 }
 
 .calendar{
@@ -51,8 +49,6 @@ body {
   place-items: center;
   width: 25;
   background-color: #515151;
-/* change white */
-
   border: 5px solid white;
 }
 
@@ -65,24 +61,18 @@ body {
   padding: 0 3.8rem;
   text-align: center;
   color: black;
-/* change white */
-
   border: 1px solid white;
 }
 
 .dateInfoStr{
   left: 100px;
   color: black;
-
 }
-
 
 .changeMonth{
   padding: 25px 20px;
   font-size: 60px;
 }
-
-/* change hover size */
 
 .changeMonth:hover {
   background-color: gray;
@@ -112,7 +102,6 @@ body {
   pointer-events: visible;
 }
 
-
 .monthList > div{
   display: grid;
   place-items: center;
@@ -128,7 +117,6 @@ body {
 .monthList > div > div:hover{
  background-color: lightgray;
 }
-
 
 .pickYear{
   display: flex;
@@ -174,10 +162,7 @@ button:hover {
   height: 100;
   padding: 20px;
   align-items: center;
-  /* change white */
-
   border: 2px solid white;
-
 }
 
 .weekdays div{
@@ -190,8 +175,6 @@ button:hover {
   align-items: center;
 }
 
-/* stop twerking */
-
 .days{
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -200,10 +183,7 @@ button:hover {
   flex-wrap: wrap;
   padding: 0.2rem;
   color: silver;
-/* change from white */
-
-  border: 2px solid white;
-  
+  border: 2px solid white; 
 }
 
 .days div{
@@ -237,9 +217,7 @@ button:hover {
   color: black;
 }
 
-
 /* weather */
-
 .weatherContainer{
   top: 200px;
   box-sizing: border-box;
@@ -269,7 +247,6 @@ button:hover {
   border-radius: 20px;
   border: 1px solid white;
   position: relative;
-
 } 
 
 .weatherSection{
@@ -279,21 +256,17 @@ button:hover {
   padding: 20px;
   border-radius: 10px;
   border: 5px solid white;
-
 }
 
 .locationDeg{
   font-size: 35px;
 }
 
-
-
 .headerWeatherImg{
   height: 75px;
   width: 75px;
   position: relative;
   top: 125px;
-
 }
 
 .headerWeatherImg img{
@@ -301,13 +274,10 @@ button:hover {
   width: 105px;
 }
 
-
-
 .imgComHL{
   font-size: 18px;
   position: relative;
   top: 15px;
-
 }
 
 .weatherDaysInfo{
@@ -318,14 +288,12 @@ button:hover {
   width: 600px;
   align-items: center;
   justify-content: center;
-
 }
 
 .weatherDaysDivs{
   font-size: 9px;
   padding: 10px;
   text-align: center;
-
 }
 
 /* location */
@@ -336,12 +304,9 @@ button:hover {
   border: 5px solid green;
   border-style: outset;
   padding: 5px;
-  /* position relative and top i can move div down */
-
   position: relative;
   top: 300px;
   float: right;
-
 }
 
 .loctionInfoContainer{
@@ -354,7 +319,6 @@ button:hover {
   padding: 20px;
   background-color: rgba(50, 50, 50, 6);
   border: 10px double;
-
 }
 
 .loctionInfoContainer button{
@@ -366,7 +330,6 @@ button:hover {
 .card-img{
  border-radius: 10px;
  padding: 5px;
-
 }
 
 
@@ -374,7 +337,6 @@ button:hover {
   padding: 5px;
   background: rgba(24, 24, 27, 0.3);
   border-radius: 10px;
-
 }
 
 /* unvisited link */
@@ -402,15 +364,9 @@ img{
   animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  /* ^ lookup V */
 }
 
  @keyframes bounce{
-
-/* 
-  from
-
-  to */
 
   0%{
     transform: translateY(0px) rotateY(0deg);
@@ -436,18 +392,14 @@ img{
 
   }
 
-  
  }
 
  .calc-notesContainer{
   position: relative;
   top: 1500px;
-  /* display: inline-block; */
-    
 }
 
 /* calculator */
-
 .calcContainer{
   position: absolute; 
   right: 0;
@@ -476,7 +428,6 @@ img{
   width: 115%;
   height: 120%;
   padding: 4px;
-  
  }
 
 
@@ -487,25 +438,7 @@ img{
   float: right;
   position: relative;
   top: 5px;
-
 }
-
- /* .calcButton {
-  font-family: 'Orbitron', sans-serif;
-  width: 85%;
-  height: 70%;
-  outline: none;
-  cursor: pointer;
-	background: #333;
-	margin: 10px;
-	border: 3px groove;
-	border-radius: 10px;
-	box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444, inset -5px -5px 10px #222;
-	color: white;
-	font-size: 16px;
-  float: left;
- } */
-
 
  .calcButtonC {
   font-family: 'Orbitron', sans-serif;
@@ -539,7 +472,6 @@ img{
 	color: white;
 	font-size: 16px;
   float: left;
-
  }
 
  .calcButtonOp{
@@ -572,15 +504,7 @@ img{
 	color: white;
 	font-size: 16px;
   float: left;
-
  }
-
- /* .calcButton:hover {
-  background: #e5e5e5;
-  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-  box-shadow: inset 0px 0px 5px #c1c1c1;
- } */
 
  .calcButtonC:hover {
   background: #e5e5e5;
@@ -611,13 +535,11 @@ img{
  }
 
  /* notes */
-
  .formContainer{
   width: 350px;
   border: inset yellow 10px;
   margin-left: 50px;
   position: relative;
-
  }
 
  .newNoteFormHeader{
@@ -634,7 +556,6 @@ img{
   margin-left: 10px;
   bottom: 20px;
   background-color: lightyellow;
-
  }
 
  .noteSubmitButton{
@@ -648,39 +569,25 @@ img{
   font-family: 'Brush Script MT', cursive;
   color: white;
   margin-left: 10px;
-
  }
-
- /* .notesContainer{
-   margin-top: 100px;
- } */
 
  .notes{
   width: 1000px;
   height: 50px;
-  /* background: black; */
   background: rgba(80, 80, 80, 1);
   border-radius: 5px 5px 0 0;
  }
 
-/* need note-pad to grow as notes are added */
  .note-pad{
   display: flex;
   position: relative;
   width: 1000px;
-  /* height: 1000px; */
-  /* height: auto; */
-  /* min-height: 60vh; */
-  /* padding: 35px; */
   background: repeating-linear-gradient(lightyellow, yellow 31px, #333 31px, #333 32px);
   line-height: 32px;
   outline: 0;
-  /* its only blue for testing (figure out how to make the */
-  /* note pad grow as the notes are added ) true color - white  */
   color: black;
   font-size: 12px;
   bottom: 376px;
-  
  }
 
  .deleteBtn{

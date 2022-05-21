@@ -1,6 +1,4 @@
 // map js
-
-// SEARCH BAR FOR ADDRESS FROM LINKS
 function renderMap(){
   let googleMap = document.createElement("script")
   
@@ -12,33 +10,19 @@ function renderMap(){
   fetch("http://localhost:3000/apiKey")
   .then(response => response.json())
   .then(data => {
-
-        console.log(data)
-
-    
     googleMap.src += data.googleKey
-    // console.log(googleMap.src)
     document.body.appendChild(googleMap)
-  
   })
-
 }
 
 function initMap(){
-
   let options = {
     zoom: 15,
     center: {lat:40.7401, lng:-73.9903}
   }
-
   let map = new google.maps.Map(document.getElementById("loctionContainer"), options)
-
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
-  // console.log('DOM fully loaded and parsed')
- 
   // renderMap()
-
 })
