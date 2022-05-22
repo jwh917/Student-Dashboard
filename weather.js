@@ -5,7 +5,13 @@ function fetchWeatherData(){
 
   fetch(weatherUrl)
     .then(res=>res.json())
-    .then(data=>renderWeatherSection(data))
+    .then(data=> {
+      
+      renderWeatherSection(data)
+      renderWeatherSectionBackground(data)
+
+      
+    })
 }
 
 function renderWeatherSection(weatherData){
@@ -43,6 +49,53 @@ let weatherDayInfo = ""
   weatherDaysInfo.innerHTML = weatherDayInfo
 }
 
+function renderWeatherSectionBackground(weatherData){
+const weatherCon = document.querySelector(".weatherContainer")
+  switch(weatherData.currentConditions.comment){
+  case "Foggy":
+    weatherCon.style.backgroundImage = "url('sunny-bluesky.gif')" 
+      break
+
+  case "Sunny":
+    weatherCon.style.backgroundImage = "url('sunny-bluesky.gif')"
+    weatherCon.style.backgroundSize = "1000px" 
+      break
+
+  case "Mostly sunny":
+    weatherCon.style.backgroundImage = "url('sunny-bluesky.gif')" 
+    weatherCon.style.backgroundSize = "1000px"
+      break
+
+  case "Partly sunny":
+    weatherCon.style.backgroundImage = "url('sunny-bluesky.gif')"
+    weatherCon.style.backgroundSize = "1000px" 
+      break
+
+  case "Cloudy":
+    weatherCon.style.backgroundImage = "url('cloudy-sky.gif')"
+    weatherCon.style.backgroundSize = "1000px" 
+      break
+
+  case "Mostly cloudy":
+    weatherCon.style.backgroundImage = "url('cloudy-sky.gif')"
+    weatherCon.style.backgroundSize = "1000px" 
+      break
+
+  case "Partly cloudy":
+    weatherCon.style.backgroundImage = "url('cloudy-sky.gif')"
+    weatherCon.style.backgroundSize = "1000px"  
+      break
+
+  case "Showers":
+    weatherCon.style.backgroundImage = "url('rainy-sky.gif')"
+    weatherCon.style.backgroundSize = "1000px" 
+      break
+    
+  default:
+      return
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  // fetchWeatherData()
+  fetchWeatherData()
 })
