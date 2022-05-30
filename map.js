@@ -7,7 +7,7 @@ function renderMap(){
   googleMap.type = "text/javascript"
   googleMap.src = "https://maps.googleapis.com/maps/api/js?callback=initMap&key="
 
-  fetch("http://localhost:3000/apiKey")
+  fetch("http://localhost:3000/apiKeys")
   .then(response => response.json())
   .then(data => {
     googleMap.src += data.googleKey

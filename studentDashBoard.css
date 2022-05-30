@@ -270,8 +270,11 @@ button:hover {
 }
 
 .headerWeatherImg img{
-  height: 105px;
-  width: 105px;
+  height: 85px;
+  width: 85px;
+  border-radius: 10px;
+  border: 2px solid white;
+  background: skyblue;
 }
 
 .imgComHL{
@@ -290,10 +293,20 @@ button:hover {
   justify-content: center;
 }
 
+/* add hover effects after adding night function */
 .weatherDaysDivs{
   font-size: 9px;
-  padding: 10px;
+  padding: 18px;
   text-align: center;
+}
+
+/* will change after adding night function */
+.weatherDaysDivs img{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid white;
+  background: skyblue;
 }
 
 /* location */
