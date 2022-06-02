@@ -226,21 +226,7 @@ button:hover {
   height:  70vh;
   display: grid;
   place-items: center;
-  width: 35;
-  float: right;
-  position: relative;
-
-} 
-
-.weatherContainer{
-  top: 200px;
-  box-sizing: border-box;
-  padding: 40px;
-  margin: 0;
-  height:  70vh;
-  display: grid;
-  place-items: center;
-  width: 35;
+  width: 680px;
   float: right;
   color: white;
   background: skyblue;
@@ -270,11 +256,8 @@ button:hover {
 }
 
 .headerWeatherImg img{
-  height: 85px;
-  width: 85px;
-  border-radius: 10px;
-  border: 2px solid white;
-  background: skyblue;
+  height: 105px;
+  width: 105px;
 }
 
 .imgComHL{
@@ -288,15 +271,17 @@ button:hover {
   border-radius: 10px;
   border: 3.5px solid white;
   display: flex;
-  width: 600px;
+  width: 625px;
+  height: 170px;
   align-items: center;
   justify-content: center;
+  margin-left: -8%;
+  padding: 10px;
 }
 
-/* add hover effects after adding night function */
 .weatherDaysDivs{
   font-size: 9px;
-  padding: 18px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -307,6 +292,11 @@ button:hover {
   border-radius: 10px;
   border: 2px solid white;
   background: skyblue;
+}
+
+.weatherDaysDivs:hover{
+  background: rgba(24, 24, 1);
+  border-radius: 10px;
 }
 
 /* location */
@@ -339,12 +329,10 @@ button:hover {
   width: 200px;
 }
 
-
 .card-img{
  border-radius: 10px;
  padding: 5px;
 }
-
 
 .card-body{
   padding: 5px;
@@ -407,6 +395,7 @@ img{
 
  }
 
+ /* calc-notes */
  .calc-notesContainer{
   position: relative;
   top: 1500px;
@@ -526,25 +515,19 @@ img{
   box-shadow: inset 0px 0px 5px #c1c1c1;
  }
 
- .calcButtonNum:hover {
-  background: #e5e5e5;
-  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-  box-shadow: inset 0px 0px 5px #c1c1c1;
- }
-
- .calcButtonOp:hover {
-  background: #e5e5e5;
-  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-  box-shadow: inset 0px 0px 5px #c1c1c1;
- }
-
  .calcButtonEq:hover {
   background: #e5e5e5;
   -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
   -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
   box-shadow: inset 0px 0px 5px #c1c1c1;
+ }
+
+ .calcButtonNum:hover {
+  background: #e5e5e5;
+ }
+
+ .calcButtonOp:hover {
+  background: #e5e5e5;
  }
 
  /* notes */

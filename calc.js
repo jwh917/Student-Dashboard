@@ -34,13 +34,9 @@ class Calculator{
   }
 
   equal(){
-    let equal
+    let equal = 0
     const display = parseFloat(this.displayScreenValue)
     const current = parseFloat(this.currentCalcValue)
-
-    if(isNaN(display) || isNaN(current))
-    //display and current are not numbers it doesnt run
-    return
 
     switch(this.operator){
       case "+":
@@ -86,7 +82,6 @@ const calculator = new Calculator(displayScreen, currentCalc)
 
 calcButtonsNum.forEach(button => {
   button.addEventListener("click", () => {
-    console.log(button.value)
     calculator.renderNum(button.value)
     calculator.updateScreen()
   })
@@ -94,7 +89,6 @@ calcButtonsNum.forEach(button => {
 
 calcButtonsOp.forEach(button => {
   button.addEventListener("click", () => {
-    console.log(button.value)
     calculator.chooseOperator(button.value)
     calculator.updateScreen()
   })

@@ -1,4 +1,5 @@
 // calendar js
+
 const date = new Date()
 
 const monthsNames = 
@@ -40,7 +41,6 @@ function renderCalendar(newDate, month, year){
   //last day of the previous month
   const prevLastDay = new Date(year, month, 0).getDate()
   //index of the date of the current month (Sunday at the 0 index)
-
   const lastDayIndex = new Date(year, month + 1, 0).getDay()
   const nextDays = 7 - lastDayIndex - 1
   const firstDayIndex = newDate.getDay()
@@ -65,6 +65,10 @@ function renderCalendar(newDate, month, year){
       calendarDays.innerHTML = days     
   }
 }
+
+let newCurrentDate = new Date()
+let newCurrentMonth = {value: newCurrentDate.getMonth()}
+let newCurrentYear = {value: newCurrentDate.getFullYear()}
 
 function monthListFunc(){
   const monthList = document.querySelector(".monthList")
@@ -100,13 +104,9 @@ function changeYearFunc(){
   }
 }
 
-let newCurrentDate = new Date()
-let newCurrentMonth = {value: newCurrentDate.getMonth()}
-let newCurrentYear = {value: newCurrentDate.getFullYear()}
-
 document.addEventListener('DOMContentLoaded', () => {  
   renderDateInfo()
+  renderCalendar(newCurrentDate, newCurrentMonth.value, newCurrentYear.value)
   monthListFunc()
   changeYearFunc()
-  renderCalendar(newCurrentDate, newCurrentMonth.value, newCurrentYear.value)
 })
