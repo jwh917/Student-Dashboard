@@ -1,74 +1,59 @@
 // calc section
+
 class Calculator{
   constructor(displayScreen, currentCalc){
     this.displayScreen = displayScreen
     this.currentCalc = currentCalc
     this.clearScreen()
+    
   }
 
   clearScreen(){
-    this.displayScreenValue = ""
-    this.currentCalcValue = ""
-    this.operator = undefined
+    this.displayScreenInput = ""
+    this.currentCalcInput = ""
+    this.operator = ""
   }
 
   renderNum(num){
-    if(num === "." && this.displayScreenValue.includes(".") ) 
-    // if . is pressed will stop adding .
-    return 
-    this.displayScreenValue = this.displayScreenValue.toString() + num.toString()
+    if(num === "." && this.displayScreenInput.includes(".") ) return
+    this.displayScreenInput = this.displayScreenInput + num
   }
 
   chooseOperator(operator){
-    if(this.displayScreenValue === "")
-    // if display is empty stop chooseOperator from being used
-    return
-    if(this.currentCalcValue !== ""){
-      // if current calc is emtpy stop chooseOperator from being used
+    if(this.displayScreenInput === "") return
+    if(this.currentCalcInput !== ""){
       this.equal()
     }
-
     this.operator = operator
-    this.currentCalcValue = `${this.displayScreenValue} ${operator}`
-    this.displayScreenValue = ""
+    this.currentCalcInput = `${this.displayScreenInput} ${operator}`
+    this.displayScreenInput = ""
   }
 
   equal(){
     let equal = 0
-    const display = parseFloat(this.displayScreenValue)
-    const current = parseFloat(this.currentCalcValue)
-
+    const display = parseFloat(this.displayScreenInput)
+    const current = parseFloat(this.currentCalcInput)
     switch(this.operator){
       case "+":
         equal = current + display
-        console.log(equal)
         break
-
       case "-":
         equal = current - display
         break
-
       case "*":
         equal = current * display
         break
-
       case "/":
         equal = current / display
-        break
-      
-      // if the case doesnt macth + - * / it will not run
-      default:
-        return
     }
-
-    this.displayScreenValue = equal
+    this.displayScreenInput = equal
     this.operator = undefined
-    this.currentCalcValue = ""
+    this.currentCalcInput = ""
   }
 
   updateScreen(){
-    this.displayScreen.value = this.displayScreenValue
-    this.currentCalc.value = this.currentCalcValue
+    this.displayScreen.value = this.displayScreenInput
+    this.currentCalc.value = this.currentCalcInput
   }
 }
 

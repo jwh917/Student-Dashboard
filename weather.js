@@ -114,8 +114,7 @@ const weatherCon = document.querySelector(".weatherContainer")
       weatherCon.style.backgroundSize = "1000px" 
         break
     
-  default:
-      return
+  default: return
   }
 }
 

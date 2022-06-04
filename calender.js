@@ -36,30 +36,26 @@ function renderCalendar(newDate, month, year){
   let calendarDays = document.querySelector(".days")
   calendarDays.innerHTML = ""
   newDate.setDate(1)
-  //last day of the current month
-  const lastDay = new Date(year, month + 1, 0).getDate()
-  //last day of the previous month
+  const firstDayIndex = newDate.getDay()
+  const currLastDay = new Date(year, month + 1, 0).getDate()
   const prevLastDay = new Date(year, month, 0).getDate()
-  //index of the date of the current month (Sunday at the 0 index)
   const lastDayIndex = new Date(year, month + 1, 0).getDay()
   const nextDays = 7 - lastDayIndex - 1
-  const firstDayIndex = newDate.getDay()
 
   let days = ""
 
-  // prev month
   for (let index0 = firstDayIndex; index0 > 0; index0--) {
       days += `<div class="previousMonthDays">${prevLastDay - index0 + 1}</div>`
   }
-  // days of the month
-  for (let index1 = 1; index1 <= lastDay; index1++) {
+
+  for (let index1 = 1; index1 <= currLastDay; index1++) {
     if(index1 === new Date().getDate() && new Date().getFullYear() === year && new Date().getMonth() === month){      
       days += `<div class="currentDate">${index1}</div>`
     } else {
       days += `<div>${index1}</div>`
     }
   }
-  // next month
+
   for (let index2 = 1; index2 <= nextDays; index2++) {
       days += `<div class="nextMonthDays">${index2}</div>`
       calendarDays.innerHTML = days     

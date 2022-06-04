@@ -4,7 +4,6 @@ function renderMap(){
   let googleMap = document.createElement("script")
   
   googleMap.async = true
-  googleMap.defer = true
   googleMap.type = "text/javascript"
   googleMap.src = "https://maps.googleapis.com/maps/api/js?callback=initMap&key="
 

@@ -6,13 +6,13 @@ function fetchNotes(){
   fetch(notesUrl)
   .then(response => response.json())
   .then(data => {
-  notesList.innerHTML = ""
-  renderNotes(data)
+    notesList.innerHTML = ""
+    renderNotes(data)
   })
 }
 
 function createOneNote(data){
-  let noteLi = document.createElement("li")
+  const noteLi = document.createElement("li")
   noteLi.className = "liNotes"
   noteLi.innerHTML = 
   `<h2>${data.note}</h2>
@@ -75,5 +75,4 @@ function deleteButtonFunc(noteId, noteLi){
 
 document.addEventListener("DOMContentLoaded", function() {
   fetchNotes()
-  formSubmitButtonFunc()
 })
